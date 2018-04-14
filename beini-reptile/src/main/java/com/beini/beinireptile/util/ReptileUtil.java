@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -33,12 +32,6 @@ public class ReptileUtil {
 				switch (linkType) {
 				case LINKS:
 					Elements links = doc.select("a[href]");
-					links.stream().filter(
-							element -> element!= null 
-							&& element.attr("abs:href") != null
-							&& !"".equals(element.attr("abs:href"))
-							&& element.text()!=null &&
-							!"".equals(element.text())).collect(Collectors.toList());
 					map.put("links", links);
 					break;
 				case MEDIA:

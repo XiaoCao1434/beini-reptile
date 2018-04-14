@@ -12,7 +12,7 @@ public class ReptileUtilTest {
 	private ReptileUtil reptileUtil= new ReptileUtil();
 	@Test
 	public void printWorkTest() {
-		String url = "http://cioclass.com";
+		String url = "http://cioclass.com:8090/cioclass/";
 		Set<LinkType> set = new HashSet<>();
 		set.add(LinkType.LINKS);
 		set.add(LinkType.IMPORTS);
